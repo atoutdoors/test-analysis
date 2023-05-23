@@ -4,9 +4,7 @@ import pandas as pd
 PLATFORMTYPE = "&PLATFORM_TYPE=NAVIS_EBR"
 BASE_URL = "https://db.whoifloatgroup.org"
 #BASE_URL = "http://127.0.0.1:8000"
-sn = 1489
-floatnum = "FLOAT_SERIAL_NO=" + str(sn) + PLATFORMTYPE
-print(floatnum)
+
 def get_cal(floatnum):
     floatnum = "FLOAT_SERIAL_NO=" + str(floatnum) + PLATFORMTYPE
     response = requests.get(BASE_URL+"/api/cal?"+floatnum)
